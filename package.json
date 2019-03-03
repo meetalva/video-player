@@ -1,13 +1,17 @@
 {
   "name": "@meetalva/video-player",
   "version": "1.0.0",
-  "description": "YouTube or Vimeo player for embedding videos",
+  "description": "YouTube and Vimeo player for embedding videos",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch"
   },
   "license": "MIT",
+  "alva": {
+    "name": "Video Player",
+    "color": "red"
+  },
   "devDependencies": {
     "@types/node": "^10.11.6",
     "@types/react": "^16.8.6",

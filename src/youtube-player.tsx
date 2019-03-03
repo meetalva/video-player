@@ -13,7 +13,7 @@ export interface YoutubePlayerProps {
   /** @name Color @default Red @group Styling */
   color?: YoutubePlayerColor;
 
-  /** @name Show Controls @default true @group Styling */
+  /** @name Controls @default true @group Styling */
   controls?: boolean;
 
   /** @name Allow Fullscreen @default true @group Styling */
@@ -21,9 +21,6 @@ export interface YoutubePlayerProps {
 
   /** @name Hide YouTube Logo @default false @group Styling */
   modestbranding?: boolean;
-
-  /** @name Plays Inline @default false @group Styling */
-  playsinline?: boolean;
 }
 
 export enum YoutubePlayerColor {
@@ -36,14 +33,10 @@ export enum YoutubePlayerColor {
  * @icon Youtube
  */
 export const YoutubePlayer: React.SFC<YoutubePlayerProps> = props => {
-  const parameters = `https://www.youtube.com/embed/${props.video}?autoplay=${translateValue(props.autoplay)}&controls=${translateValue(props.controls)}&fs=${translateValue(props.fs)}&modestbranding=${translateValue(props.modestbranding)}&playsinline=${translateValue(props.playsinline)}&color=${props.color}&mute=${translateValue(props.mute)}`;
+  const url = `https://www.youtube.com/embed/${props.video}?autoplay=${translateValue(props.autoplay)}&controls=${translateValue(props.controls)}&fs=${translateValue(props.fs)}&modestbranding=${translateValue(props.modestbranding)}&playsinline=${translateValue(props.playsinline)}&color=${props.color}&mute=${translateValue(props.mute)}`;
 
-  // ${props.start && `&start=${props.start}`}${props.end && `&end=${props.end}`}
   return (
-    <>
-      <iframe width="560" height="315" src={parameters} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      {parameters}
-    </>
+    <iframe width="560" height="315" src={url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
   );
 };
 
