@@ -22,7 +22,7 @@ export interface VimeoPlayerProps {
     /** @name Color @description Only for videos hosted with a Plus account or higher @default 00adef @group Styling */
     color?: string;
 
-    /** @name Width @default 640px @group Size */
+    /** @name Width @default 75% @group Size */
     width?: string;
 }
 

@@ -10,9 +10,6 @@ export interface YoutubePlayerProps {
   /** @name Mute @default false @group Video */
   mute?: boolean;
 
-  /** @name Color @default Red @group Styling */
-  color?: YoutubePlayerColor;
-
   /** @name Controls @default true @group Styling */
   controls?: boolean;
 
@@ -22,7 +19,10 @@ export interface YoutubePlayerProps {
   /** @name Hide YouTube Logo @default false @group Styling */
   modestbranding?: boolean;
 
-  /** @name Width @default 640px @group Size */
+  /** @name Color @default Red @group Styling */
+  color?: YoutubePlayerColor;
+
+  /** @name Width @default 75% @group Size */
   width?: string;
 }
 
