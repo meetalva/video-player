@@ -1,6 +1,6 @@
 {
   "name": "@meetalva/video-player",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "YouTube and Vimeo player for embedding videos",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "license": "MIT",
   "alva": {
     "name": "Video Player",
-    "color": "red"
+    "image": "https://media.meetalva.io/library/video-player/image.svg",
+    "color": "#1E2024"
   },
   "devDependencies": {
     "@types/node": "^10.11.6",
