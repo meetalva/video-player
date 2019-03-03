@@ -4,8 +4,8 @@
 ```sh
 git clone https://github.com/meetalva/video-player.git
 cd video-player
-npm install
-npm run build:watch
+yarn
+yarn build:watch
 ```
 
 ## Contribute
