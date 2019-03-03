@@ -21,6 +21,9 @@ export interface VimeoPlayerProps {
 
     /** @name Color @description Only for videos hosted with a Plus account or higher @default 00adef @group Styling */
     color?: string;
+
+    /** @name Width @default 640px @group Size */
+    width?: string;
 }
 
 /** 
@@ -28,14 +31,29 @@ export interface VimeoPlayerProps {
  * @icon Video
  */
 export const VimeoPlayer: React.SFC<VimeoPlayerProps> = props => {
-  const url = `https://player.vimeo.com/video/${props.video}?autoplay=${translateValue(props.autoplay)}&loop=${translateValue(props.loop)}color=${props.color}&byline=${translateValue(props.byline)}&portrait=${translateValue(props.portrait)}&title=${translateValue(props.title)}`;
+  const url = `https://player.vimeo.com/video/${props.video}?autoplay=${translateValue(props.autoplay)}&loop=${translateValue(props.loop)}&color=${props.color}&byline=${translateValue(props.byline)}&portrait=${translateValue(props.portrait)}&title=${translateValue(props.title)}`;
 
   return (
-    <iframe src={url} width="640" height="360" frameBorder="0" allowFullScreen></iframe>
+    <div style={{
+      width: props.width
+    }}>
+      <div style={{
+        padding: '56.25% 0 0 0',
+        position: 'relative',
+      }}>
+        <iframe src={url} frameBorder="0" allowFullScreen style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          borderWidth: 0
+        }} />
+      </div>
+    </div>
   );
 };
 
 function translateValue(value: boolean | undefined): number {
   return value ? 1 : 0;
 }
-
