@@ -1,6 +1,6 @@
 {
   "name": "@meetalva/video-player",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "description": "YouTube and Vimeo player for embedding videos",
   "alva": {
     "name": "Video Player",
