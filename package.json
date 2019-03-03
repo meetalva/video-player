@@ -1,0 +1,19 @@
+{
+  "name": "@meetalva/video-player",
+  "version": "1.0.0",
+  "description": "YouTube or Vimeo player for embedding videos",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.11.6",
+    "@types/react": "^16.8.6",
+    "typescript": "^3.1.2"
+  },
+  "dependencies": {
+    "react": "^16.8.3"
+  }
+}
