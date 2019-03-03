@@ -33,7 +33,7 @@ export enum YoutubePlayerColor {
  * @icon Youtube
  */
 export const YoutubePlayer: React.SFC<YoutubePlayerProps> = props => {
-  const url = `https://www.youtube.com/embed/${props.video}?autoplay=${translateValue(props.autoplay)}&controls=${translateValue(props.controls)}&fs=${translateValue(props.fs)}&modestbranding=${translateValue(props.modestbranding)}&playsinline=${translateValue(props.playsinline)}&color=${props.color}&mute=${translateValue(props.mute)}`;
+  const url = `https://www.youtube.com/embed/${props.video}?autoplay=${translateValue(props.autoplay)}&controls=${translateValue(props.controls)}&fs=${translateValue(props.fs)}&modestbranding=${translateValue(props.modestbranding)}&color=${props.color}&mute=${translateValue(props.mute)}`;
 
   return (
     <iframe width="560" height="315" src={url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
