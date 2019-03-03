@@ -4,7 +4,7 @@
   "description": "YouTube and Vimeo player for embedding videos",
   "alva": {
     "name": "Video Player",
-    "color": "#1E2024",
+    "color": "#A23737",
     "image": "https://media.meetalva.io/library/video-player/image.svg"
   },
   "main": "lib/index.js",
